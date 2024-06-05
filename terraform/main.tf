@@ -1,9 +1,11 @@
 provider "aws" {
-  access_key = "test"
-  secret_key = "test"
-  region     = "us-east-1"
-  s3_host    = "http://localhost:4566"
-  lambda_host = "http://localhost:4566"
+  profile = "default"
+  region  = "us-east-1"
+
+  endpoints {
+    s3      = "http://localhost:4566"
+    lambda  = "http://localhost:4566"
+  }
 }
 
 resource "aws_s3_bucket" "s3_start" {
