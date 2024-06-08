@@ -1,0 +1,10 @@
+Install Localstack (https://docs.localstack.cloud/getting-started/installation/) - an AWS emulator in local environment
+Install Terraform (https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) 
+Create a folder in your lab repository named “terraform”
+Create main.tf file for configuring Cloud provider (Localstack) (https://docs.localstack.cloud/user-guide/integrations/terraform/)
+Create a simple infrastructure
+Two S3 buckets (for example s3-start and s3-finish)
+S3 lifecycle policy
+Lambda (write your custom lambda), which copies file from s3-start bucket to s3-finish
+S3-bucket event, which triggers Lambda when file is uploaded to s3-start bucket
+Optional: integrate one another service of your choice in this architecture (such as SNS, SQS, CloudWatch, EventBridge, or something else, be creative)
